@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Kevin Jia" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico">
+    <title>Project1</title>
+    <meta name="generator" content="Hugo 0.79.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../../"><i class="fa fa-home"></i></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="../../post/">BLOG</a></li>
+        
+        <li><a href="../../projects/">PROJECTS</a></li>
+        
+        <li><a href="../../resume/">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="../../project/project1/">Project1</a></strong>
+          </h3>
+        </div>
+ 
+<div class="blog-title">
+          <h4>
+         January 1, 0001 
+            &nbsp;&nbsp;
+            
+          </h4>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+<link href="../../rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="../../rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="r-markdown" class="section level2">
+<h2>R Markdown</h2>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<pre class="r"><code>data(package = .packages(all.available = TRUE))</code></pre>
+<pre><code>## Warning in data(package = .packages(all.available = TRUE)): datasets have been
+## moved from package &#39;base&#39; to package &#39;datasets&#39;</code></pre>
+<pre><code>## Warning in data(package = .packages(all.available = TRUE)): datasets have been
+## moved from package &#39;stats&#39; to package &#39;datasets&#39;</code></pre>
+<pre class="r"><code>install.packages(&quot;fivethirtyeight&quot;, repos =  &quot;https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html&quot;)</code></pre>
+<pre><code>## Installing package into &#39;/stor/home/kaj2349/R/x86_64-pc-linux-gnu-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre><code>## Warning: unable to access index for repository https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html/src/contrib:
+##   cannot open URL &#39;https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html/src/contrib/PACKAGES&#39;</code></pre>
+<pre><code>## Warning: package &#39;fivethirtyeight&#39; is not available (for R version 3.6.1)</code></pre>
+<pre class="r"><code>library(fivethirtyeight)</code></pre>
+<pre><code>## Some larger datasets need to be installed separately, like senators and
+## house_district_forecast. To install these, we recommend you install the
+## fivethirtyeightdata package by running:
+## install.packages(&#39;fivethirtyeightdata&#39;, repos =
+## &#39;https://fivethirtyeightdata.github.io/drat/&#39;, type = &#39;source&#39;)</code></pre>
+<pre class="r"><code>data()
+
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(tidyr)
+library(stringr)
+library(tibble)
+library(ggplot2)
+library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ readr   1.3.1     ✓ forcats 0.5.0
+## ✓ purrr   0.3.4</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>The two datasets that I have chosen are the drinks dataset and the life_expectancy dataset. These two datasets interest me, because as a college student who enjoys going out for a drink with friends, I've always wondered about the real long term effects of alcohol on the human body, especially if it significantly affects life expectancy. The drinks dataset describes which coountries consume the most alcohol. The drinks dataset contains the variables country, total_litres_of_pure_alcohol, and servings. The country variable represents the country, the servings variable is split into beer_servings, spirit_servings, and wine_servings, and describes the total number of servings of each type of alcohol consumed by the respective country. The total_litres_of_pure_alcohol describes the total amount of pure alcohol consumed by each respective country. The life_expectancy dataset contains the variables country, year, status, life expectancy, and many other variables. The country variable represents the country. The year variable represents the year, ranging from 2000-2015. The life expectancy represents the average life expectancy for the country in that particular year. The drinks dataset was acquired from fivethirtyeight and the life_expectancy dataset was acquired from kaggle (<a href="https://www.kaggle.com/kumarajarshi/life-expectancy-who" class="uri">https://www.kaggle.com/kumarajarshi/life-expectancy-who</a>). I expect drinks and life expectancy to have a negative correlation, since it is generally believed that alcohol consumption is damaging to the body and can cause various types of cancers and shorten life expectancy.</p>
+</div>
+<div id="tidying" class="section level2">
+<h2>Tidying:</h2>
+<pre class="r"><code>drinks_tidy &lt;- drinks %&gt;%
+  pivot_longer(cols = ends_with(&quot;servings&quot;), names_to = &quot;type&quot;, values_to = &quot;servings&quot;) %&gt;%
+  mutate(
+    type = str_sub(type, start=1, end=-10)
+  ) %&gt;%
+  arrange(country, type)
+
+life_expectancy_tidy &lt;- read.csv(&quot;https://drive.google.com/uc?export=download&amp;id=1eAh-MFQd2kV3R6rUXyQPDgUzkDwbKDcd&quot;)</code></pre>
+</div>
+<div id="joiningmerging" class="section level2">
+<h2>Joining/Merging</h2>
+<pre class="r"><code>drinks_life_joined &lt;- drinks_tidy %&gt;% left_join(life_expectancy_tidy, by = c(&quot;country&quot;=&quot;Country&quot;))</code></pre>
+<p>I joined drinks and life expectancy by country because I want to compare the life expectancy of each country with the amount of alcohol consumed. I joined by the 'country' variable. The drinks dataset had 579 observations of 4 variables and the life_expectancy dataset had 2938 observations of 22 variables before joining. After joining, the drinks_life_joined dataset has 7689 observations of 25 variables.</p>
+</div>
+<div id="wrangling" class="section level2">
+<h2>Wrangling</h2>
+<pre class="r"><code>### filter()
+big_drinkers &lt;- drinks_life_joined %&gt;% filter(total_litres_of_pure_alcohol &gt;= 5)
+head(big_drinkers)</code></pre>
+<pre><code>## # A tibble: 6 x 25
+##   country total_litres_of… type  servings  Year Status Life.expectancy
+##   &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;    &lt;int&gt; &lt;int&gt; &lt;fct&gt;            &lt;dbl&gt;
+## 1 Andorra             12.4 beer       245    NA &lt;NA&gt;              NA  
+## 2 Andorra             12.4 spir…      138    NA &lt;NA&gt;              NA  
+## 3 Andorra             12.4 wine       312    NA &lt;NA&gt;              NA  
+## 4 Angola               5.9 beer       217  2015 Devel…            52.4
+## 5 Angola               5.9 beer       217  2014 Devel…            51.7
+## 6 Angola               5.9 beer       217  2013 Devel…            51.1
+## # … with 18 more variables: Adult.Mortality &lt;int&gt;, infant.deaths &lt;int&gt;,
+## #   Alcohol &lt;dbl&gt;, percentage.expenditure &lt;dbl&gt;, Hepatitis.B &lt;int&gt;,
+## #   Measles &lt;int&gt;, BMI &lt;dbl&gt;, under.five.deaths &lt;int&gt;, Polio &lt;int&gt;,
+## #   Total.expenditure &lt;dbl&gt;, Diphtheria &lt;int&gt;, HIV.AIDS &lt;dbl&gt;, GDP &lt;dbl&gt;,
+## #   Population &lt;dbl&gt;, thinness..1.19.years &lt;dbl&gt;, thinness.5.9.years &lt;dbl&gt;,
+## #   Income.composition.of.resources &lt;dbl&gt;, Schooling &lt;dbl&gt;</code></pre>
+<pre class="r"><code>### arrange()
+biggest_drinkers &lt;- drinks_life_joined %&gt;% arrange(desc(total_litres_of_pure_alcohol))
+head(biggest_drinkers)</code></pre>
+<pre><code>## # A tibble: 6 x 25
+##   country total_litres_of… type  servings  Year Status Life.expectancy
+##   &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;    &lt;int&gt; &lt;int&gt; &lt;fct&gt;            &lt;dbl&gt;
+## 1 Belarus             14.4 beer       142  2015 Devel…            72.3
+## 2 Belarus             14.4 beer       142  2014 Devel…            72  
+## 3 Belarus             14.4 beer       142  2013 Devel…            71.7
+## 4 Belarus             14.4 beer       142  2012 Devel…            71.9
+## 5 Belarus             14.4 beer       142  2011 Devel…            72  
+## 6 Belarus             14.4 beer       142  2010 Devel…            73  
+## # … with 18 more variables: Adult.Mortality &lt;int&gt;, infant.deaths &lt;int&gt;,
+## #   Alcohol &lt;dbl&gt;, percentage.expenditure &lt;dbl&gt;, Hepatitis.B &lt;int&gt;,
+## #   Measles &lt;int&gt;, BMI &lt;dbl&gt;, under.five.deaths &lt;int&gt;, Polio &lt;int&gt;,
+## #   Total.expenditure &lt;dbl&gt;, Diphtheria &lt;int&gt;, HIV.AIDS &lt;dbl&gt;, GDP &lt;dbl&gt;,
+## #   Population &lt;dbl&gt;, thinness..1.19.years &lt;dbl&gt;, thinness.5.9.years &lt;dbl&gt;,
+## #   Income.composition.of.resources &lt;dbl&gt;, Schooling &lt;dbl&gt;</code></pre>
+<pre class="r"><code>### select()
+country_drinks_lifeExpectancy &lt;- drinks_life_joined %&gt;% select(country, Year,  total_litres_of_pure_alcohol, Life.expectancy)
+head(country_drinks_lifeExpectancy)</code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   country      Year total_litres_of_pure_alcohol Life.expectancy
+##   &lt;chr&gt;       &lt;int&gt;                        &lt;dbl&gt;           &lt;dbl&gt;
+## 1 Afghanistan  2015                            0            65  
+## 2 Afghanistan  2014                            0            59.9
+## 3 Afghanistan  2013                            0            59.9
+## 4 Afghanistan  2012                            0            59.5
+## 5 Afghanistan  2011                            0            59.2
+## 6 Afghanistan  2010                            0            58.8</code></pre>
+<pre class="r"><code>### mutate()
+mutate_gallons &lt;- drinks_life_joined %&gt;% mutate(gallons = 0.264172 * total_litres_of_pure_alcohol)
+head(mutate_gallons)</code></pre>
+<pre><code>## # A tibble: 6 x 26
+##   country total_litres_of… type  servings  Year Status Life.expectancy
+##   &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;    &lt;int&gt; &lt;int&gt; &lt;fct&gt;            &lt;dbl&gt;
+## 1 Afghan…                0 beer         0  2015 Devel…            65  
+## 2 Afghan…                0 beer         0  2014 Devel…            59.9
+## 3 Afghan…                0 beer         0  2013 Devel…            59.9
+## 4 Afghan…                0 beer         0  2012 Devel…            59.5
+## 5 Afghan…                0 beer         0  2011 Devel…            59.2
+## 6 Afghan…                0 beer         0  2010 Devel…            58.8
+## # … with 19 more variables: Adult.Mortality &lt;int&gt;, infant.deaths &lt;int&gt;,
+## #   Alcohol &lt;dbl&gt;, percentage.expenditure &lt;dbl&gt;, Hepatitis.B &lt;int&gt;,
+## #   Measles &lt;int&gt;, BMI &lt;dbl&gt;, under.five.deaths &lt;int&gt;, Polio &lt;int&gt;,
+## #   Total.expenditure &lt;dbl&gt;, Diphtheria &lt;int&gt;, HIV.AIDS &lt;dbl&gt;, GDP &lt;dbl&gt;,
+## #   Population &lt;dbl&gt;, thinness..1.19.years &lt;dbl&gt;, thinness.5.9.years &lt;dbl&gt;,
+## #   Income.composition.of.resources &lt;dbl&gt;, Schooling &lt;dbl&gt;, gallons &lt;dbl&gt;</code></pre>
+<pre class="r"><code>### summary statistic 1 - summarize()
+summary &lt;- drinks_life_joined %&gt;% summarize(mean(Life.expectancy, na.rm=T), n(), n_distinct(country))
+head(summary)</code></pre>
+<pre><code>## # A tibble: 1 x 3
+##   `mean(Life.expectancy, na.rm = T)` `n()` `n_distinct(country)`
+##                                &lt;dbl&gt; &lt;int&gt;                 &lt;int&gt;
+## 1                               69.1  7689                   193</code></pre>
+<pre class="r"><code>###  summary statistic 2 - summarize()
+summary &lt;- drinks_life_joined %&gt;% summarize(mean(total_litres_of_pure_alcohol, na.rm=T), n(), n_distinct(country))
+head(summary)</code></pre>
+<pre><code>## # A tibble: 1 x 3
+##   `mean(total_litres_of_pure_alcohol, na.rm = T)` `n()` `n_distinct(country)`
+##                                             &lt;dbl&gt; &lt;int&gt;                 &lt;int&gt;
+## 1                                            4.68  7689                   193</code></pre>
+<pre class="r"><code>### summary statistic 3 - group_by(country) mean
+groupby_country_mean &lt;- drinks_life_joined %&gt;% group_by(country) %&gt;% summarize(mean_lifeExpectancy = mean(Life.expectancy, na.rm=T), mean_alc = mean(total_litres_of_pure_alcohol, na.rm=T))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="r"><code>head(groupby_country_mean)</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   country           mean_lifeExpectancy mean_alc
+##   &lt;chr&gt;                           &lt;dbl&gt;    &lt;dbl&gt;
+## 1 Afghanistan                      58.2      0  
+## 2 Albania                          75.2      4.9
+## 3 Algeria                          73.6      0.7
+## 4 Andorra                         NaN       12.4
+## 5 Angola                           49.0      5.9
+## 6 Antigua &amp; Barbuda               NaN        4.9</code></pre>
+<pre class="r"><code>### summary statistic 4 - group_by(country) , group_by(Year) mean
+groupby_year &lt;- drinks_life_joined %&gt;% group_by(country) %&gt;% group_by(Year) %&gt;% summarize(mean_lifeExpectancy = mean(Life.expectancy, na.rm=T), mean_alc = mean(total_litres_of_pure_alcohol, na.rm=T))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="r"><code>head(groupby_year)</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##    Year mean_lifeExpectancy mean_alc
+##   &lt;int&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+## 1  2000                66.6     4.68
+## 2  2001                67.0     4.68
+## 3  2002                67.2     4.68
+## 4  2003                67.2     4.68
+## 5  2004                67.5     4.68
+## 6  2005                68.1     4.68</code></pre>
+<pre class="r"><code>### summary statistic 5 - group_by() sd
+groupby_life_sd &lt;- drinks_life_joined %&gt;% group_by(country) %&gt;% summarize(sd_lifeExpectancy = sd(Life.expectancy, na.rm=T))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="r"><code>head(groupby_life_sd)</code></pre>
+<pre><code>## # A tibble: 6 x 2
+##   country           sd_lifeExpectancy
+##   &lt;chr&gt;                         &lt;dbl&gt;
+## 1 Afghanistan                    2.33
+## 2 Albania                        1.80
+## 3 Algeria                        1.52
+## 4 Andorra                       NA   
+## 5 Angola                         2.78
+## 6 Antigua &amp; Barbuda             NA</code></pre>
+<pre class="r"><code>### summary statistic 6 - group_by() sd drinks
+groupby_drinks_sd &lt;- drinks_life_joined %&gt;% group_by(type) %&gt;% summarize(sd_drinks = sd(servings, na.rm=T))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="r"><code>head(groupby_drinks_sd)</code></pre>
+<pre><code>## # A tibble: 3 x 2
+##   type   sd_drinks
+##   &lt;chr&gt;      &lt;dbl&gt;
+## 1 beer       101. 
+## 2 spirit      86.3
+## 3 wine        81.8</code></pre>
+<pre class="r"><code>### summary statistic 7 - group_by() min life expectancy
+groupby_country_min &lt;- drinks_life_joined %&gt;% group_by(country) %&gt;% summarize(min_lifeExpectancy = min(Life.expectancy, na.rm=T))</code></pre>
+<pre><code>## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf
+
+## Warning in min(Life.expectancy, na.rm = T): no non-missing arguments to min;
+## returning Inf</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="r"><code>head(groupby_country_min)</code></pre>
+<pre><code>## # A tibble: 6 x 2
+##   country           min_lifeExpectancy
+##   &lt;chr&gt;                          &lt;dbl&gt;
+## 1 Afghanistan                     54.8
+## 2 Albania                         72.6
+## 3 Algeria                         71.3
+## 4 Andorra                        Inf  
+## 5 Angola                          45.3
+## 6 Antigua &amp; Barbuda              Inf</code></pre>
+<pre class="r"><code>### summary statistic 8 - group_by() max life expectancy
+groupby_country_max &lt;- drinks_life_joined %&gt;% group_by(country) %&gt;% summarize(max_lifeExpectancy = max(Life.expectancy, na.rm=T))</code></pre>
+<pre><code>## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf</code></pre>
+<pre><code>## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf
+
+## Warning in max(Life.expectancy, na.rm = T): no non-missing arguments to max;
+## returning -Inf</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="r"><code>head(groupby_country_max)</code></pre>
+<pre><code>## # A tibble: 6 x 2
+##   country           max_lifeExpectancy
+##   &lt;chr&gt;                          &lt;dbl&gt;
+## 1 Afghanistan                     65  
+## 2 Albania                         77.8
+## 3 Algeria                         75.6
+## 4 Andorra                       -Inf  
+## 5 Angola                          56  
+## 6 Antigua &amp; Barbuda             -Inf</code></pre>
+<pre class="r"><code>### summary statistic 9 - group_by() median life expectancy
+groupby_country_med &lt;- drinks_life_joined %&gt;% group_by(country) %&gt;% summarize(med_lifeExpectancy = median(Life.expectancy, na.rm=T))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="r"><code>head(groupby_country_med)</code></pre>
+<pre><code>## # A tibble: 6 x 2
+##   country           med_lifeExpectancy
+##   &lt;chr&gt;                          &lt;dbl&gt;
+## 1 Afghanistan                     57.8
+## 2 Albania                         75.6
+## 3 Algeria                         73.9
+## 4 Andorra                         NA  
+## 5 Angola                          48.4
+## 6 Antigua &amp; Barbuda               NA</code></pre>
+<pre class="r"><code>### summary statistic 10 - group_by() median drinks
+groupby_drinks_med &lt;- drinks_life_joined %&gt;% group_by(country) %&gt;% summarize(med_total_litres_of_pure_alcohol = median(total_litres_of_pure_alcohol, na.rm=T))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="r"><code>head(groupby_drinks_med)</code></pre>
+<pre><code>## # A tibble: 6 x 2
+##   country           med_total_litres_of_pure_alcohol
+##   &lt;chr&gt;                                        &lt;dbl&gt;
+## 1 Afghanistan                                    0  
+## 2 Albania                                        4.9
+## 3 Algeria                                        0.7
+## 4 Andorra                                       12.4
+## 5 Angola                                         5.9
+## 6 Antigua &amp; Barbuda                              4.9</code></pre>
+<p>For the filter() dplyr function, I filtered by countries with a total alcohol consumption of greater than 5 litres. For the arrange() dplyr function I arranged the total alcohol by countries in decreasing order. For the select() dplyr function, I selected by country, year, total liters of alcohol, and life expectancy. For the mutate() dplyr function, I added a new column that converted liters of alcohol for each country into gallons, so that it is easier to visualize for me. For 2 of the summarize() dpylr functions I summarized by mean life expectancy for one and mean total alcohol consumption for the second. I grouped by country while summarizing by mean life expectancy and mean alcohol consumption. I also grouped by country and year while summarizing by mean life expectancy and mean alcohol consumption. I grouped by country while summarizing by standard deviation of life expectancy. I grouped by type of alcoholic drink type while summarizing by standard deviation of servings of alcoholic drinks. I grouped by country and summarized by max and min life expectancies. I grouped by country while summarizing by median life expectancy and median total amount of alcohol consumed.</p>
+</div>
+<div id="visualizing" class="section level2">
+<h2>Visualizing</h2>
+<pre class="r"><code>drinks_le = subset(drinks_life_joined, select=-c(country, type, Status))
+glimpse(drinks_le)</code></pre>
+<pre><code>## Rows: 7,689
+## Columns: 22
+## $ total_litres_of_pure_alcohol    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ servings                        &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ Year                            &lt;int&gt; 2015, 2014, 2013, 2012, 2011, 2010, 2…
+## $ Life.expectancy                 &lt;dbl&gt; 65.0, 59.9, 59.9, 59.5, 59.2, 58.8, 5…
+## $ Adult.Mortality                 &lt;int&gt; 263, 271, 268, 272, 275, 279, 281, 28…
+## $ infant.deaths                   &lt;int&gt; 62, 64, 66, 69, 71, 74, 77, 80, 82, 8…
+## $ Alcohol                         &lt;dbl&gt; 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0…
+## $ percentage.expenditure          &lt;dbl&gt; 71.279624, 73.523582, 73.219243, 78.1…
+## $ Hepatitis.B                     &lt;int&gt; 65, 62, 64, 67, 68, 66, 63, 64, 63, 6…
+## $ Measles                         &lt;int&gt; 1154, 492, 430, 2787, 3013, 1989, 286…
+## $ BMI                             &lt;dbl&gt; 19.1, 18.6, 18.1, 17.6, 17.2, 16.7, 1…
+## $ under.five.deaths               &lt;int&gt; 83, 86, 89, 93, 97, 102, 106, 110, 11…
+## $ Polio                           &lt;int&gt; 6, 58, 62, 67, 68, 66, 63, 64, 63, 58…
+## $ Total.expenditure               &lt;dbl&gt; 8.16, 8.18, 8.13, 8.52, 7.87, 9.20, 9…
+## $ Diphtheria                      &lt;int&gt; 65, 62, 64, 67, 68, 66, 63, 64, 63, 5…
+## $ HIV.AIDS                        &lt;dbl&gt; 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.…
+## $ GDP                             &lt;dbl&gt; 584.25921, 612.69651, 631.74498, 669.…
+## $ Population                      &lt;dbl&gt; 33736494, 327582, 31731688, 3696958, …
+## $ thinness..1.19.years            &lt;dbl&gt; 17.2, 17.5, 17.7, 17.9, 18.2, 18.4, 1…
+## $ thinness.5.9.years              &lt;dbl&gt; 17.3, 17.5, 17.7, 18.0, 18.2, 18.4, 1…
+## $ Income.composition.of.resources &lt;dbl&gt; 0.479, 0.476, 0.470, 0.463, 0.454, 0.…
+## $ Schooling                       &lt;dbl&gt; 10.1, 10.0, 9.9, 9.8, 9.5, 9.2, 8.9, …</code></pre>
+<pre class="r"><code>drinks_le%&gt;%select_if(is.numeric)%&gt;%
+  cor%&gt;%as.data.frame%&gt;%
+  rownames_to_column%&gt;%pivot_longer(-1)%&gt;%
+  ggplot(aes(rowname,name,fill=value))+geom_tile()+
+  geom_text(aes(label=round(value,2)))+
+  xlab(&quot;&quot;)+ylab(&quot;&quot;)+coord_fixed()+
+  scale_fill_gradient2(low=&quot;red&quot;,mid=&quot;white&quot;,high=&quot;blue&quot;)</code></pre>
+<pre><code>## Warning: Removed 460 rows containing missing values (geom_text).</code></pre>
+<p><img src="../../project/project1_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>There is a strong positive correlation between servings and total_litres_of_pure_alcohol. There does not seem to be correlations between other variables according to the correlation heatmap.</p>
+<pre class="r"><code>ggplot(data = drinks_life_joined, aes(x = total_litres_of_pure_alcohol, y = Life.expectancy, fill = Year)) + geom_point(size=2, aes(color = Year)) + geom_smooth(method = lm, se = FALSE) + ggtitle(&quot;Total alcohol consumption vs life expectancy&quot;) + labs(x = &quot;Total liters of alcohol&quot;, y = &quot;Life expectancy&quot;) + scale_x_continuous(breaks=seq(0,15,1)) + theme(plot.title = element_text(size = 18, face = &quot;bold&quot;, color = &quot;purple&quot;))</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 105 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 105 rows containing missing values (geom_point).</code></pre>
+<p><img src="../../project/project1_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>There appears to be a weak positive correlation between alcohol consumption and life expectancy. From the graph, it appears that people living in countries with higher alcohol consumption tend to have longer life expectancies. This contradicts my prediction that total alcohol consumption and life expectancy would have a negative correlation. There appear to be several outliers in the graph.</p>
+<pre class="r"><code>ggplot(data = drinks_life_joined, aes(x = total_litres_of_pure_alcohol, y = Life.expectancy, fill = Year)) + geom_smooth(method = lm, se = FALSE) + ggtitle(&quot;Total alcohol consumption vs life expectancy&quot;) + labs(x = &quot;Total liters of alcohol&quot;, y = &quot;Life expectancy&quot;) + theme(plot.title = element_text(size = 18, face = &quot;bold&quot;, color = &quot;orange&quot;)) +  facet_wrap(drinks_life_joined$Year) + geom_bar(stat=&#39;summary&#39;, fun.y = mean)</code></pre>
+<pre><code>## Warning: Ignoring unknown parameters: fun.y</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 105 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 105 rows containing non-finite values (stat_summary).</code></pre>
+<pre><code>## No summary function supplied, defaulting to `mean_se()`</code></pre>
+<pre><code>## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`
+## No summary function supplied, defaulting to `mean_se()`</code></pre>
+<p><img src="../../project/project1_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>There appears to be a weak positive correlation between alcohol consumption and life expectancy for every year from 2000 to 2015. From the graphs, it appears that countries with higher amounts of alcohol consumption tend to have higher life expectancies. This contradicts my prediction that total alcohol consumption and life expectancy would have a negative correlation.</p>
+</div>
+<div id="dimensionality-reduction" class="section level2">
+<h2>Dimensionality Reduction</h2>
+<pre class="r"><code>drinks_life_joined1 &lt;- drinks_life_joined %&gt;% select(-country, -type, -Status)
+drinks_life_joined1 &lt;- drinks_life_joined %&gt;% select_if(is.numeric) %&gt;% scale
+rownames(drinks_life_joined1) &lt;- drinks_life_joined$Name</code></pre>
+<pre><code>## Warning: Unknown or uninitialised column: `Name`.</code></pre>
+<pre class="r"><code>drinks_life_pca &lt;- princomp(na.omit(drinks_life_joined1))
+names(drinks_life_pca)</code></pre>
+<pre><code>## [1] &quot;sdev&quot;     &quot;loadings&quot; &quot;center&quot;   &quot;scale&quot;    &quot;n.obs&quot;    &quot;scores&quot;   &quot;call&quot;</code></pre>
+<p>Take the drinks_life_joined dataset and clean the data by grabbing all numerics except country, type and status. Normalize the data and run princomp() on the scaled data and decide how many principal components to keep. Visualise and interpret the data.</p>
+<pre class="r"><code>eigval&lt;-drinks_life_pca$sdev^2 #square to convert SDs to eigenvalues
+varprop=round(eigval/sum(eigval), 2) #proportion of var explained by each PC
+ggplot() + geom_bar(aes(y=varprop, x=1:22), stat=&quot;identity&quot;) + 
+  geom_text(aes(x=1:22, y=varprop, label=round(varprop, 2)), vjust=1, col=&quot;white&quot;, size=5) +
+  scale_y_continuous(breaks=seq(0, .6, .2), labels = scales::percent) +
+  scale_x_continuous(breaks=1:10) + 
+  labs(title = &quot;Proportion of Variance vs PCs&quot;, x = &quot;Principle Component&quot;, y = &quot;Variance Proportion&quot;)</code></pre>
+<p><img src="../../project/project1_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Square to convert SDs to eigenvalues. To decide how many PCs to keep, plot the proportion of variance explained by each PC from largest eigen value to smallest (&quot;a scree plot&quot;). To determine how many PCs to keep: pick PCs until the scree plot flattens, picks PCs until cumulative proportion of variance is greater than 80%, and pick PCs whose eigenvalues are greater than 1(Kaiser's rule).</p>
+<pre class="r"><code>preparedData &lt;- drinks_life_joined%&gt;%ungroup()%&gt;%select(-country, -type, -Status)
+nums &lt;- preparedData%&gt;% select_if(is.numeric) %&gt;% scale
+drinks_life_pca &lt;- princomp(na.omit(nums))
+summary(drinks_life_pca, loadings=T)</code></pre>
+<pre><code>## Importance of components:
+##                           Comp.1    Comp.2     Comp.3     Comp.4     Comp.5
+## Standard deviation     2.5135888 1.7276125 1.40548777 1.29499635 1.04748263
+## Proportion of Variance 0.3075353 0.1452778 0.09615251 0.08162883 0.05340724
+## Cumulative Proportion  0.3075353 0.4528130 0.54896556 0.63059439 0.68400164
+##                            Comp.6     Comp.7     Comp.8     Comp.9    Comp.10
+## Standard deviation     0.97259367 0.88423558 0.87059405 0.83941660 0.76935110
+## Proportion of Variance 0.04604361 0.03805769 0.03689248 0.03429743 0.02881082
+## Cumulative Proportion  0.73004525 0.76810294 0.80499542 0.83929285 0.86810368
+##                          Comp.11    Comp.12    Comp.13    Comp.14    Comp.15
+## Standard deviation     0.6977072 0.65414734 0.63355664 0.60937229 0.56380942
+## Proportion of Variance 0.0236948 0.02082848 0.01953788 0.01807473 0.01547288
+## Cumulative Proportion  0.8917985 0.91262696 0.93216483 0.95023957 0.96571245
+##                           Comp.16     Comp.17     Comp.18     Comp.19
+## Standard deviation     0.52490582 0.386659644 0.329070289 0.272072614
+## Proportion of Variance 0.01341125 0.007277198 0.005270889 0.003603099
+## Cumulative Proportion  0.97912370 0.986400895 0.991671783 0.995274882
+##                            Comp.20     Comp.21      Comp.22
+## Standard deviation     0.263007919 0.160492686 0.0462996259
+## Proportion of Variance 0.003367008 0.001253767 0.0001043426
+## Cumulative Proportion  0.998641890 0.999895657 1.0000000000
+## 
+## Loadings:
+##                                 Comp.1 Comp.2 Comp.3 Comp.4 Comp.5 Comp.6
+## total_litres_of_pure_alcohol     0.275  0.155  0.357                0.199
+## servings                         0.250  0.142  0.242                0.300
+## Year                                          -0.133        -0.303 -0.360
+## Life.expectancy                  0.282  0.155 -0.260                     
+## Adult.Mortality                 -0.199 -0.168  0.393  0.151              
+## infant.deaths                   -0.187  0.457                            
+## Alcohol                          0.274  0.162  0.349                0.252
+## percentage.expenditure           0.170  0.114  0.114        -0.496 -0.109
+## Hepatitis.B                      0.137        -0.193  0.563              
+## Measles                                 0.279                0.233       
+## BMI                              0.262               -0.143  0.230 -0.241
+## under.five.deaths               -0.189  0.446                            
+## Polio                            0.168        -0.116  0.479              
+## Total.expenditure                0.124         0.124        -0.125 -0.564
+## Diphtheria                       0.165        -0.129  0.480              
+## HIV.AIDS                        -0.148 -0.162  0.582  0.209        -0.269
+## GDP                              0.174  0.114  0.103        -0.463 -0.103
+## Population                      -0.126  0.508                0.174 -0.285
+## thinness..1.19.years            -0.306  0.131         0.231 -0.352  0.209
+## thinness.5.9.years              -0.301  0.131         0.232 -0.349  0.229
+## Income.composition.of.resources  0.271  0.154                            
+## Schooling                        0.276  0.118                            
+##                                 Comp.7 Comp.8 Comp.9 Comp.10 Comp.11 Comp.12
+## total_litres_of_pure_alcohol     0.200         0.111                        
+## servings                         0.251                0.108                 
+## Year                             0.336  0.651  0.311 -0.120  -0.193         
+## Life.expectancy                                      -0.138                 
+## Adult.Mortality                         0.256         0.239           0.451 
+## infant.deaths                                                 0.116   0.119 
+## Alcohol                          0.136                                      
+## percentage.expenditure          -0.412                0.166   0.115         
+## Hepatitis.B                             0.117  0.109  0.164   0.579  -0.319 
+## Measles                         -0.295         0.645 -0.257                 
+## BMI                                           -0.319 -0.344   0.489   0.468 
+## under.five.deaths                                             0.124   0.128 
+## Polio                           -0.189 -0.103                -0.469   0.488 
+## Total.expenditure                0.426 -0.630  0.179                        
+## Diphtheria                      -0.141                       -0.106         
+## HIV.AIDS                        -0.233        -0.177 -0.439          -0.317 
+## GDP                             -0.379                0.135                 
+## Population                              0.128 -0.456  0.374  -0.179  -0.225 
+## thinness..1.19.years             0.178 -0.116 -0.140 -0.220   0.112         
+## thinness.5.9.years               0.188 -0.100 -0.142 -0.226   0.107         
+## Income.composition.of.resources         0.110        -0.332  -0.126  -0.141 
+## Schooling                                     -0.110 -0.274                 
+##                                 Comp.13 Comp.14 Comp.15 Comp.16 Comp.17 Comp.18
+## total_litres_of_pure_alcohol     0.222           0.242   0.117           0.262 
+## servings                        -0.608  -0.477  -0.279                         
+## Year                                    -0.130   0.165   0.114          -0.115 
+## Life.expectancy                          0.161  -0.167  -0.119   0.216  -0.721 
+## Adult.Mortality                 -0.120   0.486  -0.305  -0.177          -0.167 
+## infant.deaths                    0.283  -0.214  -0.248                         
+## Alcohol                          0.304   0.130   0.303   0.128          -0.383 
+## percentage.expenditure                                                         
+## Hepatitis.B                                             -0.325                 
+## Measles                         -0.401   0.246   0.232                         
+## BMI                             -0.142           0.189   0.220                 
+## under.five.deaths                0.315  -0.222  -0.242                         
+## Polio                                   -0.195   0.265  -0.314                 
+## Total.expenditure                                                              
+## Diphtheria                                      -0.375   0.732                 
+## HIV.AIDS                                -0.237                          -0.191 
+## GDP                                                                            
+## Population                      -0.267   0.181   0.241                         
+## thinness..1.19.years            -0.119           0.119                         
+## thinness.5.9.years              -0.110   0.113                                 
+## Income.composition.of.resources          0.284  -0.326  -0.230  -0.681   0.165 
+## Schooling                                0.266  -0.105  -0.213   0.677   0.386 
+##                                 Comp.19 Comp.20 Comp.21 Comp.22
+## total_litres_of_pure_alcohol     0.119   0.676                 
+## servings                                                       
+## Year                                                           
+## Life.expectancy                  0.100   0.360                 
+## Adult.Mortality                                                
+## infant.deaths                                            0.711 
+## Alcohol                                 -0.549                 
+## percentage.expenditure                          -0.679         
+## Hepatitis.B                                                    
+## Measles                                                        
+## BMI                                                            
+## under.five.deaths                                       -0.702 
+## Polio                                                          
+## Total.expenditure                                              
+## Diphtheria                                                     
+## HIV.AIDS                                 0.102                 
+## GDP                                              0.733         
+## Population                                                     
+## thinness..1.19.years            -0.684   0.163                 
+## thinness.5.9.years               0.696  -0.121                 
+## Income.composition.of.resources                                
+## Schooling                       -0.108  -0.220</code></pre>
+<pre class="r"><code>library(factoextra)</code></pre>
+<pre><code>## Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa</code></pre>
+<pre class="r"><code>fviz_pca_biplot(drinks_life_pca)</code></pre>
+<p><img src="../../project/project1_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>A biplot combines a loadings plot with a PC score plot. The variables that extend into the first quadrant are positively correlated for PC1 and positively correlated for PC2. The variables that extend into the second quadrant are negatively correlated for PC1 and positively correlated for PC2. The variables that extend into the third quadrant are negatively correlated for PC1 and negatively correlated for PC2. The variables that extend into the fourth quadrant are positively correlated for PC1 and negatively correlated for PC2.</p>
+<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+</div>
+
+            
+        <hr>         <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div> 
+            </div>
+          </div>
+
+   <hr>  <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div> 
+        </div>
+      </div>
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="../../js/docs.min.js"></script>
+<script src="../../js/main.js"></script>
+
+<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>
